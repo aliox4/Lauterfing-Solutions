@@ -7,7 +7,7 @@
 
 <!-- ============ SEO PRIMAIRE ============ -->
 <title>Lauterfing Solutions — Sites web orientés devis pour artisans & TPE | Paris & Île-de-France</title>
-<meta name="description" content="Création et refonte de sites web orientés demandes de devis pour artisans, TPE et prestataires B2B. Audit gratuit en 20 min, prix fixe avant démarrage, livraison en 2 à 3 semaines. Basé à Bry-sur-Marne, Paris et Île-de-France.">
+<meta name="description" content="Création et refonte de sites web orientés demandes de devis pour artisans, TPE et prestataires B2B. Audit gratuit en 20 min, prix fixe avant démarrage, livraison entre 1 et 3 semaines. Basé à Bry-sur-Marne, Paris et Île-de-France.">
 <meta name="author" content="Clément Lauterfing">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://lauterfing-solutions.fr/">
@@ -100,7 +100,7 @@
     "name": "Offres Lauterfing Solutions",
     "itemListElement": [
       {"@type": "Offer", "name": "Diagnostic Web", "price": "290", "priceCurrency": "EUR", "description": "Audit complet sous 5 jours : site, Google Business, concurrence. Rapport PDF et visio 45 min."},
-      {"@type": "Offer", "name": "Site Conversion", "price": "790", "priceCurrency": "EUR", "description": "Site 5 à 7 pages ou landing page orienté conversion, livré en 2 à 3 semaines.", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "790", "priceCurrency": "EUR"}},
+      {"@type": "Offer", "name": "Site Conversion", "price": "790", "priceCurrency": "EUR", "description": "Site 5 à 7 pages ou landing page orienté conversion, livré entre 1 et 3 semaines.", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "790", "priceCurrency": "EUR"}},
       {"@type": "Offer", "name": "Acquisition 360", "price": "2490", "priceCurrency": "EUR", "description": "Système complet : site, prospection B2B, automatisations. À partir de 2490 € + 390 €/mois."}
     ]
   },
@@ -323,6 +323,49 @@ p { color: var(--text-2); }
   min-height: 44px;
 }
 .btn-ghost:hover { color: var(--text); }
+
+.icon-link,
+.link-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+.icon-logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.malt-mark {
+  color: #FC5757;
+}
+.whatsapp-mark {
+  color: #25D366;
+}
+.cas-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+.cas-media-label {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(11,12,14,.72);
+  backdrop-filter: blur(6px);
+}
+
 
 @media (max-width: 520px) {
   .btn { min-height: 52px; padding: 14px 20px; font-size: 14.5px; }
@@ -2183,7 +2226,7 @@ footer {
     </ul>
     <div class="drawer-cta">
       <a href="#contact" class="btn btn-primary">Réserver 20 min →</a>
-      <a href="https://wa.me/33667380528?text=Bonjour%20Cl%C3%A9ment%2C" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp direct</a>
+      <a href="https://wa.me/33667380528?text=Bonjour%20Cl%C3%A9ment%2C" class="btn btn-outline" target="_blank" rel="noopener"><span class="icon-logo whatsapp-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></span>WhatsApp direct</a>
     </div>
     <div class="drawer-meta">
       <a href="mailto:contact@lauterfing-solutions.fr">✉ contact@lauterfing-solutions.fr</a>
@@ -2203,12 +2246,12 @@ footer {
       <div class="hero-text">
         <span class="eyebrow">Sites web · SEO local · automatisations simples · prospection B2B</span>
         <h1>
-          Un site clair<br>
-          qui transforme<br>
-          <em class="h-em">les visiteurs en devis.</em>
+          Le site<br>
+          que votre travail<br>
+          <em class="h-em">mérite.</em>
         </h1>
         <p class="hero-sub">
-          Je crée ou je refonds votre site pour expliquer votre offre en 5 secondes, rassurer vos prospects et déclencher plus facilement une demande de contact. Prix fixe avant démarrage, livraison en 2 à 3 semaines, zéro jargon inutile.
+          Je crée ou je refonds votre site pour expliquer votre offre en 5 secondes, rassurer vos prospects et déclencher plus facilement une demande de contact. Prix fixe avant démarrage, livraison entre 1 et 3 semaines, zéro jargon inutile.
         </p>
         <div class="hero-ctas">
           <a href="#contact" class="btn btn-primary">Audit gratuit 20 min →</a>
@@ -2221,7 +2264,7 @@ footer {
         </div>
         <div class="hero-proof">
           <span class="stars" aria-label="5 étoiles sur 5">★★★★★</span>
-          <span>Recommandé 5/5 sur Malt — réalisation vérifiable&nbsp;: <a href="https://atelierdesbarbiers.fr" target="_blank" rel="noopener">atelierdesbarbiers.fr</a></span>
+          <span>Recommandé 5/5 et vérifié sur Malt, première plateforme européenne de freelances</span>
         </div>
       </div>
       <figure class="hero-portrait">
@@ -2251,8 +2294,8 @@ footer {
         <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <a class="trust-item" href="https://www.malt.fr/profile/clementlauterfing" target="_blank" rel="noopener" aria-label="Profil Malt vérifié avec 2 recommandations 5/5">
-        <span class="check-dot" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        <span class="check-dot malt-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="17" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="currentColor">malt</text></svg>
         </span>
         <span class="meta">
           <span class="label">2 recommandations · 5/5</span>
@@ -2287,7 +2330,7 @@ footer {
     </div>
     <div class="reperes-grid">
       <div class="repere">
-        <div class="repere-num">3 <span class="h-em">sem.</span></div>
+        <div class="repere-num">1–3 <span class="h-em">sem.</span></div>
         <div class="repere-label">Livraison standard</div>
         <div class="repere-desc">De la signature à la mise en ligne, sur 95 % des projets.</div>
       </div>
@@ -2459,7 +2502,7 @@ footer {
     <div class="sec-head">
       <span class="eyebrow">02 — Le système simple</span>
       <div>
-        <h2>Pas besoin d'un site plus joli. <span class="h-em">Besoin d'un parcours plus clair.</span></h2>
+        <h2>Pendant que vous faites votre job, <span class="h-em">je m'occupe de le rendre visible.</span></h2>
         <p class="sec-intro">Le bon site pour une TPE n'est pas une démonstration de design. C'est un outil qui explique vite, rassure, capte la demande et relance sans vous rajouter du travail.</p>
       </div>
     </div>
@@ -2729,7 +2772,7 @@ footer {
         <p class="offre-desc">Pour artisans et TPE qui veulent un site (ou une landing page) qui génère vraiment des demandes — pas une carte de visite numérique oubliée.</p>
         <div class="offre-price">
           <div class="offre-price-main"><span class="prefix">à partir de</span>790 €</div>
-          <div class="offre-price-meta"><span>prix fixe</span><span>livré en 2–3 sem.</span></div>
+          <div class="offre-price-meta"><span>prix fixe</span><span>livré entre 1 et 3 sem.</span></div>
         </div>
         <div class="offre-incl-label">Ce qui est inclus</div>
         <ul class="offre-incl">
@@ -2842,7 +2885,8 @@ footer {
     </div>
 
     <div class="cas-card">
-      <div class="cas-media" aria-hidden="true">
+      <div class="cas-media">
+        <img src="./assets/atelierdesbarbiers-capture.png" alt="Capture du site atelierdesbarbiers.fr réalisé par Lauterfing Solutions" width="2048" height="1021" loading="lazy">
         <span class="cas-media-label">↳ Capture · atelierdesbarbiers.fr</span>
       </div>
       <div class="cas-content">
@@ -2919,7 +2963,7 @@ footer {
     <div class="sec-head">
       <span class="eyebrow">08 — Questions cash</span>
       <div>
-        <h2><span class="h-em">Ce que vous vous demandez</span> sans toujours oser le demander.</h2>
+        <h2><span class="h-em">Ce que vous vous demandez</span> sans toujours oser en parler.</h2>
         <p class="sec-intro">Les vraies objections que j'entends à chaque premier appel. Réponses directes, sans langue de bois.</p>
       </div>
     </div>
@@ -3009,8 +3053,8 @@ footer {
             <span class="alt-channel-note">&lt; 1 h ouvré</span>
           </a>
           <a class="alt-channel" href="https://www.malt.fr/profile/clementlauterfing" target="_blank" rel="noopener" aria-label="Voir le profil Malt">
-            <span class="alt-channel-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <span class="alt-channel-icon malt-mark" aria-hidden="true">
+              <svg width="40" height="16" viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="17" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="currentColor">malt</text></svg>
             </span>
             <span class="alt-channel-meta">
               <span class="alt-channel-label">Profil Malt</span>
@@ -3030,11 +3074,11 @@ footer {
           <div class="field-row">
             <div class="field">
               <label for="prenom">Votre prénom</label>
-              <input type="text" id="prenom" name="prenom" required minlength="2" autocomplete="given-name" placeholder="Ex. Clément">
+              <input type="text" id="prenom" name="prenom" required minlength="2" autocomplete="given-name">
             </div>
             <div class="field">
               <label for="telephone">Téléphone <span class="optional">optionnel</span></label>
-              <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" placeholder="06 67 38 05 28">
+              <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel">
             </div>
           </div>
           <div class="field">
@@ -3096,7 +3140,7 @@ footer {
           <h3>Bien reçu.</h3>
           <p>Je vous écris sous 1 h ouvré avec 2 créneaux d'appel. Pendant ce temps, vous pouvez aussi me joindre directement&nbsp;:</p>
           <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <a href="https://wa.me/33667380528" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp →</a>
+            <a href="https://wa.me/33667380528" class="btn btn-primary" target="_blank" rel="noopener"><span class="icon-logo whatsapp-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></span>WhatsApp →</a>
             <a href="tel:+33667380528" class="btn btn-outline">06 67 38 05 28</a>
           </div>
         </div>
@@ -3134,7 +3178,7 @@ footer {
         <h5>Réalisations</h5>
         <ul>
           <li><a href="https://atelierdesbarbiers.fr" target="_blank" rel="noopener">atelierdesbarbiers.fr ↗</a></li>
-          <li><a href="https://www.malt.fr/profile/clementlauterfing" target="_blank" rel="noopener">Profil Malt ↗</a></li>
+          <li><a href="https://www.malt.fr/profile/clementlauterfing" target="_blank" rel="noopener" class="link-with-icon"><span class="icon-logo malt-mark" aria-hidden="true"><svg viewBox="0 0 64 24" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="17" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="currentColor">malt</text></svg></span><span>Profil Malt ↗</span></a></li>
           <li><a href="https://www.linkedin.com/in/clauterfing/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
         </ul>
       </div>
@@ -3143,7 +3187,7 @@ footer {
         <ul>
           <li><a href="mailto:contact@lauterfing-solutions.fr">contact@lauterfing-solutions.fr</a></li>
           <li><a href="tel:+33667380528">06 67 38 05 28</a></li>
-          <li><a href="https://wa.me/33667380528" target="_blank" rel="noopener">WhatsApp direct ↗</a></li>
+          <li><a href="https://wa.me/33667380528" target="_blank" rel="noopener" class="link-with-icon"><span class="icon-logo whatsapp-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></span><span>WhatsApp direct ↗</span></a></li>
         </ul>
       </div>
     </div>
