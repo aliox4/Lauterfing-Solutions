@@ -732,6 +732,7 @@ section { padding: 110px 0; position: relative; }
   color: var(--text-2);
   max-width: 640px;
   line-height: 1.6;
+  margin-top: clamp(18px, 2vw, 28px);
 }
 @media (min-width: 920px) {
   .sec-head {
@@ -2213,8 +2214,6 @@ footer {
       <img src="./assets/logo.webp" alt="Lauterfing Solutions" width="160" height="32" loading="eager">
     </a>
     <ul class="nav-links">
-      <li><a href="#problemes">Problèmes</a></li>
-      <li><a href="#solution">Solution</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#offres">Offres</a></li>
       <li><a href="#methode">Méthode</a></li>
@@ -2238,13 +2237,11 @@ footer {
   </div>
   <div class="drawer-body">
     <ul>
-      <li><a href="#problemes">Problèmes</a><span class="drawer-num">01</span></li>
-      <li><a href="#solution">Solution</a><span class="drawer-num">02</span></li>
-      <li><a href="#services">Services</a><span class="drawer-num">03</span></li>
-      <li><a href="#offres">Offres</a><span class="drawer-num">04</span></li>
-      <li><a href="#methode">Méthode</a><span class="drawer-num">05</span></li>
-      <li><a href="#preuves">Réalisations</a><span class="drawer-num">06</span></li>
-      <li><a href="#faq">FAQ</a><span class="drawer-num">07</span></li>
+      <li><a href="#services">Services</a><span class="drawer-num">01</span></li>
+      <li><a href="#offres">Offres</a><span class="drawer-num">02</span></li>
+      <li><a href="#methode">Méthode</a><span class="drawer-num">03</span></li>
+      <li><a href="#preuves">Réalisations</a><span class="drawer-num">04</span></li>
+      <li><a href="#faq">FAQ</a><span class="drawer-num">05</span></li>
     </ul>
     <div class="drawer-cta">
       <a href="#contact" class="btn btn-primary">Réserver 20 min →</a>
@@ -2344,7 +2341,7 @@ footer {
     <div class="sec-head">
       <span class="eyebrow">Comment je travaille — en chiffres</span>
       <div>
-        <h2>Pas une agence. <span class="h-em">Un interlocuteur.</span><br>Cadrage écrit. Prix fixe.</h2>
+        <h2>Pendant que vous faites votre job, <span class="h-em">je m'occupe de le rendre visible.</span></h2>
         <p class="sec-intro">Vous savez exactement qui code, combien ça coûte, et quand c'est livré — avant de signer le moindre euro.</p>
       </div>
     </div>
@@ -2373,205 +2370,15 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     04 · PROBLÈMES (checker interactif)
-     ============================================ -->
-<section class="problemes" id="problemes" aria-label="Problèmes fréquents">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">01 — Vous reconnaissez-vous ?</span>
-      <div>
-        <h2><span class="h-em">Huit phrases</span> que j'entends presque chaque semaine. Cochez celles qui vous parlent.</h2>
-        <p class="sec-intro">Aucun de ces points n'est dramatique pris seul. C'est leur accumulation qui fait perdre une commande par-ci, un client par-là. Lisez calmement — le bilan en bas s'occupe du reste.</p>
-      </div>
-    </div>
 
-    <div class="problemes-list">
-      <!-- 01 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">01 · Image du site</div>
-        <div class="probleme-quote">« Mon site, je n'ose plus trop le montrer. »</div>
-        <div class="probleme-desc">Les visuels datent, la mise en page se casse sur mobile. Les concurrents à côté ont l'air plus à jour. Vous le savez, vous repoussez.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Une refonte propre qui ressemble à votre travail d'aujourd'hui, pas à 2014.</div>
-        </div>
-      </button>
-      <!-- 02 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">02 · Demandes de devis</div>
-        <div class="probleme-quote">« Le formulaire est là. Personne ne le remplit. »</div>
-        <div class="probleme-desc">Vous voyez passer du trafic, parfois beaucoup. Mais peu de devis arrivent — et difficile de dire pourquoi.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Une page repensée pour guider doucement vers la demande, sans pression.</div>
-        </div>
-      </button>
-      <!-- 03 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">03 · Lisibilité de l'offre</div>
-        <div class="probleme-quote">« On me demande encore ce que je fais exactement. »</div>
-        <div class="probleme-desc">Pour vous c'est limpide. Pour un visiteur qui découvre, le site ressemble à un catalogue sans porte d'entrée claire.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Votre offre en une phrase, lisible en 5 secondes. Avec vos mots, pas du jargon.</div>
-        </div>
-      </button>
-      <!-- 04 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">04 · Relance des devis</div>
-        <div class="probleme-quote">« Je devais le rappeler… ça fait trois semaines. »</div>
-        <div class="probleme-desc">Le devis part jeudi. Lundi, vous êtes déjà sur un autre chantier. La relance, on s'y met jamais vraiment.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Relances automatiques à 48 h, 7 j, 14 j — même quand vous êtes sur le toit.</div>
-        </div>
-      </button>
-      <!-- 05 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">05 · Qualité des demandes</div>
-        <div class="probleme-quote">« Je reçois des demandes sans budget, ni adresse. »</div>
-        <div class="probleme-desc">Trois champs et c'est trop vague pour répondre. Dix champs et plus personne ne remplit. Pas évident à doser.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Un formulaire en 2 étapes courtes qui filtre avant que ça arrive chez vous.</div>
-        </div>
-      </button>
-      <!-- 06 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">06 · Suivi client</div>
-        <div class="probleme-quote">« C'était noté où, ce devis, déjà ? »</div>
-        <div class="probleme-desc">Carnet, mails, Post-it, mémoire. Tant que ça reste 5 dossiers, ça tient. À 30 par mois, c'est plus pareil.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Toutes vos demandes au même endroit, en un coup d'œil. Rien à apprendre.</div>
-        </div>
-      </button>
-      <!-- 07 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">07 · Bouche-à-oreille</div>
-        <div class="probleme-quote">« Si le réseau ralentit, je ralentis avec. »</div>
-        <div class="probleme-desc">Le bouche-à-oreille est précieux, mais c'est votre seul canal. Quand il se tasse, il n'y a pas de plan B.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Un canal de demandes en plus de votre réseau, pour lisser les creux.</div>
-        </div>
-      </button>
-      <!-- 08 -->
-      <button class="probleme" data-checked="false" type="button">
-        <span class="probleme-check" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-        </span>
-        <span class="probleme-hint">Cliquer pour cocher</span>
-        <div class="probleme-num">08 · Temps &amp; énergie</div>
-        <div class="probleme-quote">« Le SEO, je verrai cet hiver. (Depuis quatre hivers.) »</div>
-        <div class="probleme-desc">Après les chantiers, la compta, la famille — le web n'arrive jamais en haut de la liste. Et c'est normal.</div>
-        <div class="probleme-fix">
-          <div class="probleme-fix-label">Réponse</div>
-          <div class="probleme-fix-text">Je m'en occupe, vous facturez votre métier. Rien à apprendre, rien à maintenir.</div>
-        </div>
-      </button>
-    </div>
-
-    <div class="problemes-meta" aria-live="polite">
-      <div class="problemes-meta-left">
-        <div class="problemes-counter"><span id="counter">0</span><span class="of"> / 8</span></div>
-        <p class="problemes-msg" id="problemes-msg">Lisez tranquillement. Cochez ce qui vous parle. <br>Le bilan apparaît ici dès que vous cochez votre première situation.</p>
-      </div>
-      <div class="problemes-actions">
-        <button type="button" class="btn btn-ghost" id="reset-problemes">Réinitialiser</button>
-        <a href="#contact" class="btn btn-primary">En parler 20 min →</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================
-     05 · SOLUTION
-     ============================================ -->
-<section class="solution" id="solution" aria-label="Solution proposée">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">02 — Le système simple</span>
-      <div>
-        <h2>Pendant que vous faites votre job, <span class="h-em">je m'occupe de le rendre visible.</span></h2>
-        <p class="sec-intro">Le bon site pour une TPE n'est pas une démonstration de design. C'est un outil qui explique vite, rassure, capte la demande et relance sans vous rajouter du travail.</p>
-      </div>
-    </div>
-    <div class="solution-grid">
-      <article class="solution-card">
-        <span class="solution-num">01</span>
-        <h3>Clarifier l'offre</h3>
-        <p>On reformule ce que vous vendez avec les mots du client : problème, bénéfice, preuve, prix ou ordre de grandeur, prochaine étape.</p>
-        <ul>
-          <li>Promesse lisible en 5 secondes</li>
-          <li>Pages services compréhensibles</li>
-          <li>Objections traitées avant l'appel</li>
-        </ul>
-      </article>
-      <article class="solution-card">
-        <span class="solution-num">02</span>
-        <h3>Déclencher la demande</h3>
-        <p>On retire les frictions : CTA visibles, formulaire court, WhatsApp, prise de rendez-vous, preuves et exemples concrets au bon endroit.</p>
-        <ul>
-          <li>Formulaire orienté qualification</li>
-          <li>CTA répétés sans agressivité</li>
-          <li>Mobile-first, rapide et lisible</li>
-        </ul>
-      </article>
-      <article class="solution-card">
-        <span class="solution-num">03</span>
-        <h3>Ne plus laisser filer</h3>
-        <p>On branche les automatisations utiles : notification immédiate, relance WhatsApp/email, suivi simple des prospects et des devis.</p>
-        <ul>
-          <li>Notification dès qu'un prospect écrit</li>
-          <li>Relances après devis</li>
-          <li>Tableau de suivi client léger</li>
-        </ul>
-      </article>
-    </div>
-    <div class="solution-cta">
-      <p>Le but : que votre site fasse gagner du temps à votre activité, pas qu'il ajoute un nouvel outil compliqué à gérer.</p>
-      <a href="#contact" class="btn btn-primary">Me montrer site actuel →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================
-     06 · SERVICES
+     04 · SERVICES
      ============================================ -->
 <section class="services" id="services" aria-label="Services">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">03 — Ce que je fais</span>
+      <span class="eyebrow">01 — Ce que je fais</span>
       <div>
         <h2>Le site au centre. <span class="h-em">Quatre piliers autour.</span> Vous prenez ce qu'il vous faut.</h2>
         <p class="sec-intro">Mon métier : créer ou refondre un site qui ramène des demandes. Le reste — formulaires, relances, trafic, suivi — vient se brancher dessus quand vous en avez besoin. Pas avant.</p>
@@ -2709,49 +2516,14 @@ footer {
   </div>
 </section>
 
-<!-- ============================================
-     06 · OUTCOMES
-     ============================================ -->
-<section class="outcomes" aria-label="Avant / Après">
-  <div class="container">
-    <div class="sec-head">
-      <span class="eyebrow">04 — Ce que ça change</span>
-      <div>
-        <h2><span class="h-em">Avant / Après.</span> Concrètement.</h2>
-        <p class="sec-intro">Ce que mes clients constatent dans les semaines qui suivent la mise en place. Ce ne sont pas des promesses contractuelles : ce sont des ordres de grandeur observés. Votre marché et votre situation feront varier ces chiffres.</p>
-      </div>
-    </div>
-
-    <div class="outcomes-grid">
-      <article class="outcome">
-        <div class="outcome-transition"><span class="from">site qui dort</span><span class="arrow">→</span><span class="to">site qui crée des opportunités</span></div>
-        <h3>Plus de demandes de devis</h3>
-        <p>Site clair, CTA visibles, formulaire court : les visiteurs intéressés ne décrochent plus en cours de route.</p>
-        <div class="outcome-lever">Levier · <strong>Site refondu + formulaire 3 champs</strong></div>
-      </article>
-      <article class="outcome">
-        <div class="outcome-transition"><span class="from">devis oubliés</span><span class="arrow">→</span><span class="to">+ de signatures</span></div>
-        <h3>Plus de devis signés</h3>
-        <p>Relances automatiques 48 h / 7 j / 14 j après envoi. Le prospect ne se sent pas oublié, vous ne courez pas derrière.</p>
-        <div class="outcome-lever">Levier · <strong>Relance email + WhatsApp</strong></div>
-      </article>
-      <article class="outcome">
-        <div class="outcome-transition"><span class="from">8 h / sem.</span><span class="arrow">→</span><span class="to">2 h / sem.</span></div>
-        <h3>Moins de temps administratif</h3>
-        <p>Fini la double saisie, les Post-it, les « j'ai oublié de rappeler ». Tout passe dans un seul outil simple.</p>
-        <div class="outcome-lever">Levier · <strong>Automatisations + suivi centralisé</strong></div>
-      </article>
-    </div>
-  </div>
-</section>
 
 <!-- ============================================
-     07 · OFFRES (3 paliers)
+     05 · OFFRES (3 paliers)
      ============================================ -->
 <section class="offres" id="offres" aria-label="Offres et tarifs">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">05 — Offres &amp; tarifs</span>
+      <span class="eyebrow">02 — Offres &amp; tarifs</span>
       <div>
         <h2><span class="h-em">Trois manières</span> de travailler ensemble. Du diagnostic au système complet.</h2>
         <p class="sec-intro">Trois niveaux d'engagement, trois prix clairs. Chaque pack est cadré par écrit avant démarrage — le prix annoncé est le prix payé.</p>
@@ -2850,12 +2622,12 @@ footer {
 </section>
 
 <!-- ============================================
-     08 · MÉTHODE
+     06 · MÉTHODE
      ============================================ -->
 <section class="methode" id="methode" aria-label="Méthode de travail">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">06 — Comment je travaille</span>
+      <span class="eyebrow">03 — Comment je travaille</span>
       <div>
         <h2><span class="h-em">Quatre étapes.</span> Pas de zone grise. Vous savez toujours où on en est.</h2>
         <p class="sec-intro">Méthode rodée : on cadre, on livre vite, on ajuste avec vous, vous gardez le contrôle. Aucun jargon, jamais.</p>
@@ -2892,15 +2664,15 @@ footer {
 </section>
 
 <!-- ============================================
-     09 · PREUVES (cas client + témoignages)
+     07 · PREUVES (cas client + témoignages)
      ============================================ -->
 <section class="preuves" id="preuves" aria-label="Réalisations et recommandations">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">07 — Réalisation &amp; recommandations</span>
+      <span class="eyebrow">04 — Réalisation &amp; recommandations</span>
       <div>
-        <h2><span class="h-em">Site livré, en ligne.</span> Recommandations publiques.</h2>
-        <p class="sec-intro">Pas d'inventaire de fausses preuves. Un site que vous pouvez visiter et deux recommandations laissées sur Malt — vérifiées par la plateforme.</p>
+        <h2><span class="h-em">Un site livré, en ligne.</span> Deux recommandations publiques.</h2>
+        <p class="sec-intro">Pas d'inventaire de fausses preuves. Voici ce qui est vérifiable aujourd'hui : un site que vous pouvez visiter et deux recommandations laissées sur Malt — vérifiées par la plateforme.</p>
       </div>
     </div>
 
@@ -2976,12 +2748,12 @@ footer {
 </section>
 
 <!-- ============================================
-     10 · FAQ
+     08 · FAQ
      ============================================ -->
 <section class="faq" id="faq" aria-label="Questions fréquentes">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">08 — Questions cash</span>
+      <span class="eyebrow">05 — Questions cash</span>
       <div>
         <h2><span class="h-em">Ce que vous vous demandez</span> sans toujours oser en parler.</h2>
         <p class="sec-intro">Les vraies objections que j'entends à chaque premier appel. Réponses directes, sans langue de bois.</p>
@@ -3030,12 +2802,12 @@ footer {
 </section>
 
 <!-- ============================================
-     11 · FINAL CTA + FORMULAIRE
+     09 · FINAL CTA + FORMULAIRE
      ============================================ -->
 <section class="final-cta" id="contact" aria-label="Premier pas — contact">
   <div class="container">
     <div class="sec-head">
-      <span class="eyebrow">09 — Premier pas</span>
+      <span class="eyebrow">06 — Premier pas</span>
       <div>
         <h2><span class="h-em">Envoyez votre site.</span> Je vous indique quoi corriger en priorité.</h2>
       </div>
