@@ -1,0 +1,94 @@
+name: Apply Calendly link
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-calendly.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Patch website index
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+
+          calendly = "https://calendly.com/c-lauterfing/30min"
+          path = Path("website/index.html")
+          html = path.read_text(encoding="utf-8")
+
+          replacements = [
+              ('<a href="#contact" class="btn btn-primary nav-cta">Réserver 20 min →</a>',
+               f'<a href="{calendly}" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Réserver 20 min →</a>'),
+              ('<a href="#contact" class="btn btn-primary">Réserver 20 min →</a>',
+               f'<a href="{calendly}" class="btn btn-primary" target="_blank" rel="noopener">Réserver 20 min →</a>'),
+              ('<a href="#contact" class="btn btn-primary">Audit gratuit 20 min →</a>',
+               f'<a href="{calendly}" class="btn btn-primary" target="_blank" rel="noopener">Audit gratuit 20 min →</a>'),
+              ('<a href="#contact" class="btn btn-outline">Réserver l\'appel →</a>',
+               f'<a href="{calendly}" class="btn btn-outline" target="_blank" rel="noopener">Réserver l\'appel →</a>'),
+              ('<a href="#contact" class="btn btn-outline">Réserver le diagnostic →</a>',
+               f'<a href="{calendly}" class="btn btn-outline" target="_blank" rel="noopener">Réserver le diagnostic →</a>'),
+              ('<a href="#contact" class="btn btn-primary">Choisir cette formule →</a>',
+               f'<a href="{calendly}" class="btn btn-primary" target="_blank" rel="noopener">Choisir cette formule →</a>'),
+              ('<a href="#contact" class="btn btn-outline">En discuter 20 min →</a>',
+               f'<a href="{calendly}" class="btn btn-outline" target="_blank" rel="noopener">En discuter 20 min →</a>'),
+              ('<a href="#contact" class="btn btn-outline">Demander un devis adapté →</a>',
+               f'<a href="{calendly}" class="btn btn-outline" target="_blank" rel="noopener">Demander un devis adapté →</a>'),
+              ('<a href="#contact" class="mobile-cta-main">Audit gratuit 20 min</a>',
+               f'<a href="{calendly}" class="mobile-cta-main" target="_blank" rel="noopener">Audit gratuit 20 min</a>'),
+          ]
+
+          for old, new in replacements:
+              html = html.replace(old, new)
+
+          anchor = '<div class="alt-channels">'
+          if anchor in html and 'alt-channel-label">Calendly' not in html:
+              calendly_card = f'''
+                    <a class="alt-channel" href="{calendly}" target="_blank" rel="noopener" aria-label="Réserver un appel Calendly de 20 minutes">
+                      <span class="alt-channel-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+                      </span>
+                      <span class="alt-channel-meta">
+                        <span class="alt-channel-label">Calendly</span>
+                        <span class="alt-channel-value">Réserver un appel de 20 min</span>
+                      </span>
+                      <span class="alt-channel-note">direct</span>
+                    </a>'''
+              html = html.replace(anchor, anchor + calendly_card, 1)
+
+          footer_line = '<li><a href="tel:+33667380528">06 67 38 05 28</a></li>'
+          if footer_line in html and 'Réserver un appel Calendly ↗' not in html:
+              html = html.replace(
+                  footer_line,
+                  footer_line + f'\n          <li><a href="{calendly}" target="_blank" rel="noopener">Réserver un appel Calendly ↗</a></li>',
+                  1
+              )
+
+          html = html.replace(
+              "Un premier échange simple : vous me donnez votre contexte, je regarde votre site ou votre projet, puis je vous réponds avec les points qui bloquent le plus vos demandes. Sans jargon, sans relance forcée.",
+              "Un premier échange simple : réservez directement un créneau Calendly ou envoyez votre contexte via le formulaire. Je regarde votre site ou votre projet, puis je vous réponds avec les points qui bloquent le plus vos demandes. Sans jargon, sans relance forcée."
+          )
+
+          path.write_text(html, encoding="utf-8")
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add website/index.html
+          git commit -m "Integrate Calendly booking links"
+          git push
